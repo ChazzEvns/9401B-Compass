@@ -64,3 +64,10 @@
     margin-right: 10%;
     margin-bottom: 10%;
 }
+.justStyle{
+    margin:12.5px -15px;
+}
+.justStyle a{
+    color:white;
+    text-decoration: none;
+}
