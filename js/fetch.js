@@ -1,22 +1,13 @@
-var vm = new Vue({
+new Vue({
     el: '#app',
-    data: {
-        status: ''
+    data () {
+      return {
+        info: null
+      }
     },
-    created: function () {
-        this.loadQuote();
-    },
-    methods: {
-        loadQoute: function () {
-            this.status = 'loading...';
-            var vm = this;
-            axios.get('http://api.eventful.com/rest/')
-            .then(function(response) {
-                vm.status = response.data[0];
-            })
-            .catch(function(error) {
-                vm.status = 'An error just occured.' + error;
-            });
-        }
+    mounted () {
+      axios
+        .get('http://api.eventful.com/json/events/search?keywords=music&location=Singapore&app_key=9KM6xpqMgc6RqHPj')
+        .then(response => (this.info = response))
     }
-});
+  });
