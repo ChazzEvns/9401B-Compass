@@ -3,11 +3,13 @@ new Vue({
     data () {
       return {
         info: [],
+        search: null
       }
     },
-    mounted () {
+
+    mounted() {
       axios
         .get('http://api.eventful.com/json/events/search?keywords=music&location=Singapore&app_key=9KM6xpqMgc6RqHPj')
         .then(response => (this.info = response))
     },
-});
+})
