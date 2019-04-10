@@ -1,11 +1,7 @@
-//var data = { c: 1 } TB
-
- new Vue({
-    //data: data TB
+/* new Vue({
     el: '#app',
     data () {
       return {
-<<<<<<< HEAD
         info: []
       }
     },
@@ -18,9 +14,44 @@
     },
      
     
+    methods: {
+         displayPage: function(id) {
+            desId = id.currentTarget.id   
+         }
+    },
     
-    
-  });
+ });*/
+
+
+window.onload = function() {
+	fetch_categories();
+}
+
+function fetch_categories() {
+	end_point = "https://www.eventbriteapi.com/v3/categories/?token=BI4EZ4WPLG53F6RLTG7B";
+
+	$.ajax({
+		url: end_point,
+		success: function(data) {
+			console.log(data);
+			category_list = data.categories;
+			
+			categories = $("#categories");
+			categories.html("");
+			var content = "";
+
+			for(var i = 0; i < category_list.length; i++) {
+				var category = category_list[i];
+
+				content += "<div class="+category.short_name+">"+category.name+"</div>";
+			}
+			
+			categories.html(content);
+		}
+	});
+}
+
+
 /*
 var Component = Vue.extend ({
     data: function () {
@@ -34,23 +65,13 @@ new Vue({
       return {
         //info: null,
         results: null
-=======
-        info: [],
->>>>>>> 1849f8cd212e77cac283c2a693e564880d79cf32
       }
     },
     
     mounted () {
       axios
-<<<<<<< HEAD
         .get('http://api.eventful.com/rest/categories/list?subcategories=music&app_key=9KM6xpqMgc6RqHPj')
         .then(response => (this.results = response))
         .catch(error => console.log(error))
     }
   });*/
-=======
-        .get('http://api.eventful.com/json/events/search?keywords=music&location=Singapore&app_key=9KM6xpqMgc6RqHPj')
-        .then(response => (this.info = response))
-    },
-});
->>>>>>> 1849f8cd212e77cac283c2a693e564880d79cf32

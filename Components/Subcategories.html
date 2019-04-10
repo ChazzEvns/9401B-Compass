@@ -9,6 +9,7 @@
         <link href="../css/Styles.css" type="text/css" rel="stylesheet">
         <script src="../js/vue.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="../js/jquery-3.2.1.min.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-inverse">
@@ -55,31 +56,8 @@
           ================================================== -->
           <!-- Wrap the rest of the page in another container to center all the content. -->
 
-          <div class="album py-5 ">
-            <div v-for="container in info" class="container">
-
-              <div class="row">
-                
-                <div class="col-md-4">
-                  <div class="card mb-4 shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect fill="#55595c" width="100%" height="100%"/><text fill="#eceeef" dy=".3em" x="50%" y="50%">Thumbs</text></svg>
-                    <div class="card-body">
-                      <p class="card-text" id="{{ container.id }}">
-                          {{ container.name }}</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  
-                
-                  
-                  
-              </div>
-            </div>
+          <div id="categories">
+              
           </div>
             
             <br>

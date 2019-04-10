@@ -1,0 +1,200 @@
+.carousel {
+    height: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+.navbar-inverse {
+    margin: 0;
+}
+#Event00123{
+    text-align: center;
+    text-decoration: none;
+  	background-color: #55595c ;
+  	color: white;
+  	padding: 13px 1px;
+  	font-family: "Lucida Console";
+	text-decoration: none;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+}
+.placeholder{
+    float: left;
+    background-color: #55595c;
+    margin-left: 10%;
+    border-style: solid;
+    height: 300px;
+    width: 35%
+
+}
+#placeholder{
+    text-align: center;
+    text-decoration: none;
+  	background-color: #000000 ;
+  	color: white;
+  	padding: 13px 1px;
+  	font-family: "Lucida Console";
+	text-decoration: none;
+    width: 100%;
+    height: 40px;
+
+}
+.imagesInside{
+    background-color: #55595c ;
+    height: 100px;
+	width: 35%;
+    margin-left: 10%;
+    align-items: baseline;
+    margin-bottom: 5%;
+}
+.anotherPlaceholder{
+    background-color: #55595c;
+    border-style: solid;
+    height: 300px;
+    margin-left: 50%;
+    width: 35%;
+}
+#anotherPlaceholder{
+  	font-family: fantasy;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+.justStyle{
+    margin:12.5px -15px;
+}
+.justStyle a{
+    color:white;
+    text-decoration: none;
+}
+
+.Music {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Business {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Food {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+
+.Community {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Arts {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Film {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Sports {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Health {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Science {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Travel {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Charity {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Spirituality {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Family {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Holiday {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Government {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Fashion{
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Home {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Auto, {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Hobbies {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.Other {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.School {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
