@@ -1,120 +1,92 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Eventuality</title>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <!-- Custom styles for this template -->
-        <link href="css/Styles.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-           <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="nav-bar">
-                    <ul class="nav navbar-nav">    
-                        <form class="navbar-form navbar-left">
-                            <div class="input-group add-on" id="search-bar">
-                                <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
-                                <div class="input-group-btn">
-                                <button class="btn btn-default" id="srch-btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                                </div>
-                                
+<template>
+  <div id="app">
+    <!-- Navbar -->
+    <b-navbar type="dark" variant="dark">
+      <b-navbar-nav>
+        <b-nav-item href="../App.vue">Home</b-nav-item>
 
-                            </div>
-                           
-                           
-                        </form> 
+        <b-nav-form>
+          <b-form-input id="searchField" type="text" v-model="search"
+          placeholder="Type here to search for an event...">
+          </b-form-input>
+        </b-nav-form>
+      </b-navbar-nav>
 
-                    </ul>
-                    <ul class="nav navbar-nav">
+      <b-navbar-nav class="ml-auto">
+        <b-dropdown text="Categories" size="sm" type="light" slot="append">
+          <b-dropdown-item>Category 1</b-dropdown-item>
+          <b-dropdown-item>Category 2</b-dropdown-item>
+        </b-dropdown>
+      </b-navbar-nav>
+    </b-navbar>
+    <!-- End of Navbar -->
 
-                            <li class="active anotherStyle"><a href="../index.html">Home</a></li>
-                            </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        
-                        <li class="dropdown"><a data-toggle="dropdown" href="#">Categories <span class="caret" ></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Category 1</a></li>
-                                <li><a href="#">Category 2</a></li>
-                                <li><a href="#">Category 3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    
-                </div>
-            </div>
-        </nav>
-        <main role="main">
+<br> <!-- space between navbar and API results -->
 
-        <!-- SEARCH RESULTS -->
-        <div class="col-md-12">
-            <div class="grid search">
-                <div class="grid-body">
-                    <div class="row">
-                        <div class="col-md-1">
-                            <!-- Right spacing for organization of website -->
-                        </div>
+    <!-- Container for API -->
+    <div v-for="(events, index) in filteredEvents" :key="index"> <!-- for loop -->
+      <b-row>
+        <b-col> <!-- left spacing --> </b-col>
+        <b-col cols="7"> <!-- column space for events to display -->
+          <a v-bind:href= "events.url"> <!-- redirects to eventbrite details of the event -->
+          <ul>
+            <b-media>
+              <b-img class="img-fluid sm-2" 
+              :src=" events.logo !== null ? events.logo.url 
+              : 'https://media.sweetwater.com/api/i/ha-84d4247e8664ac7f__hmac-7354964eeaec98f56ef1eb5365271d5054a6c911/images/store/image_not_available.gif'" 
+              slot="aside"
+              > <!-- events.logo and events.logo.url checks if there are no values in object,
+                      then if there are no values, it will return another image via url. -->
+              </b-img>
+              <h4>{{ events.name.text }}</h4> <!-- gets the title of the event -->
+              <p>
+                {{ events.start.timezone }} |
+                date posted: {{ events.published.slice(0, 10) }} <!-- .slice() gets specific characters -->
+                <br>{{ events.summary }} <!-- short description of event -->
+              </p>
+            </b-media>
+          </ul>
+          </a>
+        </b-col>
+        <b-col> <!-- right spacing --> </b-col>
+      </b-row>
+    </div>
+    <!-- End for Container of API -->
+  </div>
+</template>
 
-                        <!-- RESULT OUTPUT -->
-                        <div class="col-md-9">
-                            <h2>Showing all results matching "[user input]"</h2>
+<script>
+import axios from 'axios'
 
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <tbody>
-                                        <tr>
-                                            <td class="image"><img src="../images/result-placeholder.png" alt=""></td>
-                                            <td class="product"><strong>Result 1</strong><br>Event description..</td>
-                                            <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="image"><img src="../images/result-placeholder.png" alt=""></td>
-                                            <td class="product"><strong>Result 2</strong><br>Event description..</td>
-                                            <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="image"><img src="../images/result-placeholder.png" alt=""></td>
-                                            <td class="product"><strong>Result 3</strong><br>Event description..</td>
-                                            <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="image"><img src="../images/result-placeholder.png" alt=""></td>
-                                            <td class="product"><strong>Result 4</strong><br>Event description..</td>
-                                            <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
-                                        </tr>
-                                            <tr>
-                                            <td class="image"><img src="../images/result-placeholder.png" alt=""></td>
-                                            <td class="product"><strong>Result 5</strong><br>Event description..</td>
-                                            <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- PAGINATION -->
-                            <ul class="pagination">
-                                <li class="disabled"><a href="#">«</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">...</a></li>
-                                <li><a href="#">»</a></li>
-                            </ul>
-                            <!-- END PAGINATION -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END SEARCH OUTPUT -->
-
-        </main>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
-</html>
+export default {
+  name: 'app',
+  data () {
+      return {
+        search: '',
+        eventData: [],
+      }
+  },
+  mounted() {
+    // API endpoint //
+    axios.get('https://www.eventbriteapi.com/v3/events/?token=BI4EZ4WPLG53F6RLTG7B')
+    .then(response => {
+      // get array of events //
+      this.eventData = response.data.events;
+    })
+    .catch((e) => {
+      console.error(e);
+    })
+  },
+  computed: {
+    filteredEvents: function() { // filters events based on what is searched //
+      return this.eventData.filter((events) => {
+        // returns matching text from search bar
+        // and converts both events.name.text and text.search
+        // to lower case to match them completely
+        return events.name.text.toLowerCase()
+        .match(this.search.toLowerCase());
+      })
+    }
+  }
+}
+</script>
