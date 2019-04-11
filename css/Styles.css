@@ -72,129 +72,225 @@
     text-decoration: none;
 }
 
-.Music {
-    width: 50px;
-    height: 50px;
-    background: black;
+.button {
+    margin-left: 30px;
+    background-color: #494949; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.Business {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Music h2 {  
+    background: url('../images/music.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
 }
 
-.Food {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Business h2{
+    background: url('../images/business.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+.Food h2 {
+    background: url('../images/food.jpeg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 
-.Community {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Community h2 {
+    background: url('../images/community.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Arts {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Arts h2 {
+    background: url('../images/arts.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Film {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Film h2 {
+    background: url('../images/Film.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Sports {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Sports h2 {
+    background: url('../images/ball.png');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Health {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Health h2 {
+    background: url('../images/music.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Science {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Science h2 {
+    background: url('../images/science.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Travel {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Travel h2 {
+    background: url('../images/travel.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Charity {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Charity h2 {
+    background: url('../images/charity.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Spirituality {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Spirituality h2 {
+    background: url('../images/religion.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Family {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Family h2 {
+    background: url('../images/family.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Holiday {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Holiday h2 {
+    background: url('../images/holiday.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Government {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Government h2 {
+    background: url('../images/government.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Fashion{
-    width: 50px;
-    height: 50px;
-    background: black;
+.Fashion h2 {
+    background: url('../images/fashion.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Home {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Home h2 {
+    background: url('../images/home.jpg');
+    background: url('../images/home.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Auto, {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Auto, h2 {
+    background: url('../images/car.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Hobbies {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Hobbies h2 {
+    background: url('../images/hobbies.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.Other {
-    width: 50px;
-    height: 50px;
-    background: black;
+.Other h2 {
+    background: url('../images/other.jpg');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
-.School {
-    width: 50px;
-    height: 50px;
-    background: black;
+.School h2 {
+    background: url('../images/School.png');
+    color: antiquewhite;
+    width: 500px;
+    padding: 100px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
